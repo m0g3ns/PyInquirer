@@ -68,9 +68,10 @@ class InquirerControl(FormattedTextControl):
             @if_mousedown
             def select_item(mouse_event):
                 # bind option with this index to mouse event
-                self.selected_option_index = index
-                self.answered = True
-                get_app().exit(result=self.get_selection()[0])
+                # self.selected_option_index = index
+                # self.answered = True
+                # get_app().exit(result=self.get_selection()[0])
+                pass
 
             if isinstance(choice[0], Separator):
                 tokens.append(('class:separator', '  %s\n' % choice[0]))
@@ -122,7 +123,7 @@ def question(message, **kwargs):
         if ic.answered:
             tokens.append(('class:answer', ' ' + ic.get_selection()[0]))
         else:
-            tokens.append(('class:instruction', ' (Pfeiltasten nutzen, Enter bestätigen)'))
+            tokens.append(('class:instruction', ' (Pfeiltasten zum Auswählen, Enter zum Bestätigen)'))
         return tokens
 
     # assemble layout
