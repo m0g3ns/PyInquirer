@@ -158,7 +158,7 @@ def question(message, **kwargs):
         else:
             tokens.append(('class:instruction',
                            ' (<hoch>, <runter> zum Bewegen, <space> zum Auswählen, <a> '
-                           'zum Togglen, <i> zum Invert)'))
+                           'zum Togglen, <i> zum Invertieren)'))
             if not ic.answered_correctly:
                 tokens.append((Token.Error, ' Error: %s' % ic.error_message))
         return tokens
