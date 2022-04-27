@@ -72,10 +72,11 @@ class InquirerControl(FormattedTextControl):
                 @if_mousedown
                 def select_item(mouse_event):
                     # bind option with this index to mouse event
-                    if line_value in self.selected_options:
-                        self.selected_options.remove(line_value)
-                    else:
-                        self.selected_options.append(line_value)
+                    # if line_value in self.selected_options:
+                    #    self.selected_options.remove(line_value)
+                    #else:
+                    #    self.selected_options.append(line_value)
+                    pass
 
                 if pointed_at:
                     tokens.append(('class:pointer', ' {} '.format(self.pointer_sign), select_item))  # ' > '
@@ -86,7 +87,7 @@ class InquirerControl(FormattedTextControl):
                     tokens.append(('', '- %s (%s)' % (choice[0], choice[2])))
                 else:
                     if selected:
-                        tokens.append(('class:selected', '{} '.format(self.selected_sign), select_item))
+                        tokens.append(('', '{} '.format(self.selected_sign), select_item))
                     else:
                         tokens.append(('', '{} '.format(self.unselected_sign), select_item))
 
