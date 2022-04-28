@@ -168,7 +168,7 @@ def question(message, **kwargs):
     layout = HSplit([
         Window(height=D.exact(1),
                content=FormattedTextControl(get_prompt_tokens),
-               align=WindowAlign.CENTER,
+               align=WindowAlign.LEFT,
         ),
         ConditionalContainer(
             Window(
